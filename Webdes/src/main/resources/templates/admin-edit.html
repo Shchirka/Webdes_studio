@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Webdes Admin Data Edit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5 mb-5">
+    <h1>Редактирование данных администратора</h1>
+    <div th:each="el : ${admin_data}">
+        <form method="post">
+            <input type="text" name="username" placeholder="Введите новый логин" class="form-control"><br>
+            <input type="text" name="password" placeholder="Введите новый пароль" class="form-control"><br>
+            <button type="submit" class="btn btn-success">Обновить</button>
+        </form>
+    </div>
+
+</div>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

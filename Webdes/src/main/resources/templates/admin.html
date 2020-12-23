@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Webdes Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<div th:replace="blocks/header :: header"/>
+
+<main role="main">
+    <div class="container mt-5 mb-5">
+            <h1>Страница администратора</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Портфолио</h2>
+                    <p>Редактировать портфолио</p>
+                    <p><a class="btn btn-secondary" href="/portfolio/create" role="button">Перейти »</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Прайс и контакты</h2>
+                    <p>Создать прайс нового продукта</p>
+                    <p><a class="btn btn-secondary" href="/price/create" role="button">Перейти »</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Заказы</h2>
+                    <p>Просмотр и управление заказами</p>
+                    <p><a class="btn btn-secondary" href="/order/list" role="button">Перейти »</a></p>
+                </div>
+<!--                <div class="col-md-4">-->
+<!--                    <h2>Личная информация</h2>-->
+<!--                    <p>Изменение личных данных (логин, пароль)</p>-->
+<!--                    <p><a class="btn btn-secondary" href="/admin/edit" role="button">Перейти »</a></p>-->
+<!--                </div>-->
+            </div>
+            <hr>
+        <div class="starter-template">
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Sign Out"/>
+            </form>
+        </div>
+    </div>
+</main>
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <header th:insert="blocks/header :: header"></header>
+    <main role="main">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Webdes studio</h1>
+                <p>Дизайн сайтов, планеров, буклетов и всего-всего, что найдете в текущем прайсе. Информация и товары периодически обновляются (как на странице прайса, так и портфолио), так что советуем почаще заходить и проверять текущее положение дел. Если есть какие-то рекомендации либо пожелания - ищите меня в контактах и пишите, не стесняйтесь!</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Портфолио</h2>
+                    <p>Просмотреть работы дизайнера: дизайн веб-сайтов, инстаграмм страниц, и т.д. короче</p>
+                    <p><a class="btn btn-secondary" href="/portfolio" role="button">Перейти »</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Прайс и контакты</h2>
+                    <p>Просмотреть цены на товары/контакты дизайнера</p>
+                    <p><a class="btn btn-secondary" href="/price" role="button">Перейти »</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Сделать заказ</h2>
+                    <p>Оформить заказ дизайна веб-продукта</p>
+                    <p><a class="btn btn-secondary" href="/order" role="button">Перейти »</a></p>
+                </div>
+            </div>
+            <hr>
+            <div class="starter-template">
+                <p class="float-left">
+                    <a href="/admin">Страница администратора</a>
+                </p>
+            </div>
+        </div><!-- /container -->
+    </main>
+    <div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

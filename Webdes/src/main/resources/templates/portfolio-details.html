@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Webdes DetPort</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5 mb-5">
+    <div th:each="elem : ${some_tovar}" class="alert alert-info mt-2">
+        <h3 th:text="${elem.title}"/>
+        <p th:text="${elem.anons}"/>
+        <div th:each="image : ${some_tovar}" class="alert alert-info mt-2">
+            <img src="${image.images}" alt="">
+        </div>
+
+        <a th:href="'/portfolio/' + ${elem.id} + '/edit'" class="btn btn-secondary">Редактировать</a><br><br>
+    </div>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

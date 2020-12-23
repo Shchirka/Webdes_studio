@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Webdes Portfolio Create</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5 mb-5">
+    <h1>Создание портфолио продукта</h1>
+    <form action="/portfolio/create" method="post">
+        <input type="text" name="title" placeholder="Название продукта" class="form-control"><br>
+        <input type="text" name="anons" placeholder="Краткое объяснение" class="form-control"><br>
+        <form enctype="multipart/form-data" method="post">
+            <p>Загрузите фотографии</p>
+            <p><input type="file" name="images" multiple accept="image/*,image/jpeg">
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+</div>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
